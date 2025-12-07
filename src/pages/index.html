@@ -1,11 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Electron + Vite + TS + ESM</title>
-  </head>
-  <body>
-    <h1>Hello Electron!</h1>
-    <script type="module" src="./index.ts"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Electron + Vite + ESM + TypeScript — Demo</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.ts"></script>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header class="hero" aria-label="Apresentação do projeto">
+      <div class="brand">
+        <div class="logo">E‣V</div>
+        <div class="title">
+          <h1>Electron + Vite + ESM + TypeScript</h1>
+          <p class="lead">Template moderno — rápido, tipado e com HMR para o renderer.</p>
+        </div>
+      </div>
+
+      <div class="controls" aria-hidden>
+        <a class="btn" href="./lista/lista.html">LISTA</a>
+        <a class="btn primary" title="Start">Executar projeto</a>
+      </div>
+    </header>
+
+    <main class="grid" aria-label="Conteúdo principal">
+      <section class="card" aria-labelledby="about">
+        <div class="intro">
+          <div style="flex:1">
+            <h2 id="about">Visão geral</h2>
+            <p class="desc">
+              Projeto de exemplo com Electron (Main + Preload), renderer gerenciado pelo Vite e código em TypeScript — tudo usando ESM. Ideal para começar apps desktop modernos com rápido ciclo de dev.
+            </p>
+
+            <div class="features" role="list">
+              <div class="feature" role="listitem"><strong>ESM</strong><div style="color:var(--muted)">Main, Preload e Renderer</div></div>
+              <div class="feature" role="listitem"><strong>TypeScript</strong><div style="color:var(--muted)">Tipos em toda a cadeia</div></div>
+              <div class="feature" role="listitem"><strong>HMR</strong><div style="color:var(--muted)">Hot reload no renderer</div></div>
+              <div class="feature" role="listitem"><strong>Preload seguro</strong><div style="color:var(--muted)">contextBridge tipado</div></div>
+            </div>
+
+            <hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,var(--glass),transparent);margin:16px 0;border-radius:2px">
+
+            <h3 style="margin:0 0 8px 0">Design & filosofia</h3>
+            <p class="desc">Leveza, separação de responsabilidades e ferramentas modernas: Vite para a experiência do desenvolvedor, esbuild para builds rápidos do main/preload e TypeScript para robustez.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side" aria-label="Comandos rápidos">
+        <div class="panel" role="region" aria-labelledby="run">
+          <h3 id="run">Comandos</h3>
+          <pre class="cmd"># dev
+npm run dev
+
+# build
+npm run build
+
+# start (app empacotado)
+npm run start</pre>
+        </div>
+
+        <div class="panel" role="region" aria-labelledby="tips">
+          <h3 id="tips">Dicas rápidas</h3>
+          <ul style="margin:0;padding-left:18px;color:var(--muted);font-size:13px">
+            <li>Use <span style="font-family:var(--mono)">wait-on</span> para garantir que o Vite esteja pronto antes do Electron.</li>
+            <li>Coloque tipos para canais IPC para segurança ponta-a-ponta.</li>
+            <li>Separe configs: <code style="font-family:var(--mono)">vite.config.ts</code> (renderer) e <code style="font-family:var(--mono)">electron.vite.config.ts</code> (main/preload).</li>
+          </ul>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div class="pill">Template • Electron + Vite</div>
+      <div style="color:var(--muted)">Criado com ❤ — pronto para customizar</div>
+    </footer>
+  </div>
+</body>
 </html>

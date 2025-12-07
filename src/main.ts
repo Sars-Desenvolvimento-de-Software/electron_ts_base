@@ -6,13 +6,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 let win: BrowserWindow;
 
-async function createWindow() {
+async function TelaApresentacao() {
   win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload/preload.main.js'),
+      preload: path.join(__dirname, 'preload/preload.mjs')
     },
+    autoHideMenuBar:true
   });
 
   if (!app.isPackaged) {
@@ -22,7 +23,7 @@ async function createWindow() {
   }
 }
 
-app.whenReady().then(createWindow);
+app.whenReady().then(TelaApresentacao);
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();

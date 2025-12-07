@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bibliotecas do Projeto — Electron + Vite + TS</title>
+  <link rel="stylesheet" href="lista.css">
+  <script src="lista.ts"></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="controls" aria-hidden>
+        <a class="btn" href="./../index.html">INICIO</a>
+      </div>
+      <h1>Bibliotecas Utilizadas</h1>
+      <p class="subtitle">Stack principal e dependências que compõem o template Electron + Vite + ESM + TS</p>
+    </header>
+
+    <section class="grid">
+
+      <div class="card">
+        <h2 class="lib-name">Electron</h2>
+        <p class="lib-desc">
+          Framework para construção de aplicações desktop multi-plataforma usando tecnologias web (HTML, CSS e JS).
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="lib-name">Vite</h2>
+        <p class="lib-desc">
+          Ferramenta de build moderna, focada em velocidade e HMR instantâneo para o renderer.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="lib-name">TypeScript</h2>
+        <p class="lib-desc">
+          Superset tipado de JavaScript utilizado em todo o projeto (main, preload e renderer).
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="lib-name">vite-plugin-electron</h2>
+        <p class="lib-desc">
+          Plugin que compila o processo principal e o preload usando esbuild, integrando-os ao fluxo do Vite.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="lib-name">vite-plugin-electron-renderer</h2>
+        <p class="lib-desc">
+          Permite o uso direto de APIs do Electron no renderer quando necessário, sem bundling adicional.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="lib-name">wait-on</h2>
+        <p class="lib-desc">
+          Utilitário que aguarda portas, URLs ou arquivos — usado para iniciar o Electron somente após o Vite subir.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="lib-name">npm-run-all</h2>
+        <p class="lib-desc">
+          Executa múltiplos scripts em paralelo ou sequência — utilizado para orquestrar o Dev e Build.
+        </p>
+      </div>
+
+    </section>
+
+    <footer>
+      Página gerada para apresentação do template Electron + Vite + ESM + TypeScript
+    </footer>
+  </div>
+</body>
+</html>
