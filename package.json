@@ -1,0 +1,37 @@
+{
+  "name": "electron_ts_base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:electron dev:renderer",
+    "dev:renderer": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && vite --config electron.vite.config.ts",
+    "build": "npm-run-all build:electron build:renderer",
+    "build:renderer": "vite build",
+    "build:electron": "vite build --config electron.vite.config.ts",
+    "preview": "vite preview",
+    "start": "electron ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sars-Desenvolvimento-de-Software/electron_ts_base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sars-Desenvolvimento-de-Software/electron_ts_base/issues"
+  },
+  "homepage": "https://github.com/Sars-Desenvolvimento-de-Software/electron_ts_base#readme",
+  "devDependencies": {
+    "@types/node": "~24.10.1",
+    "electron": "~39.2.6",
+    "npm-run-all": "~4.1.5",
+    "typescript": "~5.9.3",
+    "vite": "~7.2.6",
+    "vite-plugin-electron": "~0.29.0",
+    "vite-plugin-electron-renderer": "~0.14.6",
+    "wait-on": "~9.0.3"
+  }
+}
